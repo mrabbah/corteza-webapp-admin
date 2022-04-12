@@ -173,6 +173,7 @@ export default (options = {}) => {
       'system.actionlog',
       'system.queues',
       'system.apigw',
+      'system.datasources',
       'compose.settings',
       'compose.permissions',
       'compose.automation',
