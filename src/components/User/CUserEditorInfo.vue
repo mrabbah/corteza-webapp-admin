@@ -118,6 +118,7 @@
 
       <confirmation-toggle
         v-if="user && user.userID"
+        data-test-id="button-delete"
         @confirmed="$emit('delete')"
       >
         {{ getDeleteStatus }}
@@ -125,6 +126,7 @@
 
       <confirmation-toggle
         v-if="user && user.userID"
+        data-test-id="button-suspended-status"
         class="ml-1"
         cta-class="light"
         @confirmed="$emit('status')"
@@ -134,6 +136,7 @@
 
       <confirmation-toggle
         v-if="user && user.userID"
+        data-test-id="button-sessions-revoke"
         :disabled="user.userID === userID"
         class="ml-1"
         cta-class="secondary"
@@ -144,6 +147,7 @@
 
       <b-button
         v-if="isExisting && !user.emailConfirmed"
+        data-test-id="button-confirm-email"
         variant="light"
         class="ml-1"
         @click="$emit('patch', '/emailConfirmed', true)"
